@@ -41,7 +41,7 @@ Repartir de l'état final du TP3.
 
 (tag : **TP4-ESIR-INIT**)
 
-# STEP 1 : Configuration et permier test unitaire
+# STEP 1 : Configuration et premier test unitaire
 
 Nous allons installer les modules mocha et chai-http et réaliser le test unitaire d'un permier service REST.
 
