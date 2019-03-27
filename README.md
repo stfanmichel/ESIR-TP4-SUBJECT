@@ -55,7 +55,29 @@ Chai-http prend en entrée une application web, dans notre cas l'application exp
 
 Il va donc falloir faire un peu de refactoring afin de rendre accessible l'objet app de app.js (en en faisant un module).
 
-Il faudra externaliser le app.listen() qui est pour le moment réalisé dans app.js dans un nouveau fichier (server.js par exemple) qui deviendra le nouveau point d'entrée de l'application. Ceci impliquera quelques mises à jours dans package.config pour s'assurer que le serveur fonctionne encore.
+A la fin du fichier app.js nous allons retrouvé un export de l'app :
+
+    ...
+    // For unit tests
+    exports.app = app
+
+Il faudra déplacé le app.listen() qui est pour le moment réalisé dans app.js dans un nouveau fichier (server.js par exemple) qui deviendra le nouveau point d'entrée de l'application.
+
+server.js ressemblera à ceci :
+
+    // Import du nouveau module app
+    const {app} = require('./app')
+
+    // Lancement du server (qui était auparavant dans app.js)
+    const port = process.env.PORT || '3000'
+    app.listen(port)
+
+Ceci impliquera une mise à jour dans package.json pour s'assurer que le serveur fonctionne encore.
+
+    {
+      ...
+      "main": "server.js",
+      ...
 
 Après cette étape de refactoring vous aurez :
 
