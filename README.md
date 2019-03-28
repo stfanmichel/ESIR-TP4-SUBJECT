@@ -124,6 +124,8 @@ En autonomie, il s'agit de tester son application avec l'outil [ZAP](https://sli
 
 Après cette analyse des failles, il s'agit de trouver les parades...
 
+Pour lancer zap, sous linux, tapez zap, il a été installé par vos administrateurs.
+
 [Vous devriez obtenir quelque chose comme...](zap.PNG)
 
 @import "zap.PNG"
