@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/stfanmichel/ESIR-TP4-SUBJECT/badge.svg?targetFile=package.json)](https://snyk.io/test/github/stfanmichel/ESIR-TP4-SUBJECT?targetFile=package.json)
+
 # ESIR-TP4 : Tests unitaires et sécurité
 
 Pour ce TP nous allons repartir de l'état final du TP4.
