@@ -92,16 +92,19 @@ Vérifier que votre serveur fonctionne encore avec la commande : npm start
 Il vous reste à modifier le fichier users-v1-test.js afin d'y importer les modules app.js, chai et chai-http.
 Coder maintenant le test du service REST /v1/users :
 
-    const chai = require('chai')
-    const chaiHttp = require('chai-http')
-    const {app} = require('../app')
-    chai.use(chaiHttp)
+```
+const chai = require('chai')
+const chaiHttp = require('chai-http')
+const {app} = require('../app')
+chai.use(chaiHttp)
+chai.should()   // Pour pouvoir utiliser should
 
-    describe('Users tests', () => {
-      it('should list ALL users on /v1/users GET', (done) => {
-        // TODO
-      })
-    })
+describe('Users tests', () => {
+  it('should list ALL users on /v1/users GET', (done) => {
+    // TODO
+  })
+})
+```
 
 (tag : **TP4-ESIR-STEP1**)
 
